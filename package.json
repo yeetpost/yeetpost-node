@@ -1,0 +1,32 @@
+{
+  "name": "yeetpost",
+  "version": "0.1.0",
+  "description": "Post automation for developers",
+  "type": "commonjs",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.cts",
+  "repository": "https://github.com/yeetpost/yeetpost-node",
+  "author": "yeetpost <info@yeetpost.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "yeetpost"
+  ],
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "jest": "^30.2.0",
+    "prettier": "3.7.3",
+    "ts-jest": "^29.4.5",
+    "tsdown": "^0.17.0-beta.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "jest",
+    "formatcheck": "prettier --check ."
+  }
+}
