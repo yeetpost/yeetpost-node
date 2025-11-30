@@ -13,7 +13,7 @@
 
 # yeetpost-node
 
-yeetpost-node is a JavaScript library for posting to multiple social media platforms via one unified API.
+yeetpost-node (`yeetpost` in npm) is a JavaScript library for posting to multiple social media platforms via one unified API.
 
 Features:
 
