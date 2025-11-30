@@ -1,9 +1,15 @@
-<center>
-![yeetpost](./yeetpost-logo.png)
-
-Post automation for developers – [yeetpost.com](https://yeetpost.com)
-
-</center>
+<div align="center">
+<img src="./yeetpost-logo.png" alt="yeetpost" height="49" />
+</div>
+<div align="center">Post automation for developers</div>
+<br />
+<div align="center">
+<a href="https://yeetpost.com">Website</a>
+<span> · </span>
+<a href="https://www.npmjs.com/package/yeetpost">NPM</a>
+<span> · </span>
+<a href="https://github.com/yeetpost/yeetpost-node">GitHub</a>
+</div>
 
 # yeetpost-node
 
@@ -112,7 +118,7 @@ interface YeetpostOptions {
 }
 ```
 
-### `YeetpostResult`
+### `YeetpostResponse`
 
 ```ts
 import { YeetpostResponse } from "yeetpost";
