@@ -26,6 +26,7 @@ Features:
 - [Installation](#installation)
 - [Setup](#setup)
 - [Usage](#usage)
+- [Limits](#limits)
 - [API](#api)
 - [License](#license)
 
@@ -85,6 +86,23 @@ const result = await yeetpost({
   noError: true,
 });
 ```
+
+## Limits
+
+Each platform has its own length limits (note that emojis consume more than 1 character):
+
+| Platform    | Length Limit                                                                | Source                                                                                       |
+| ----------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| LinkedIn    | 3,000 characters                                                            | [source](https://www.linkedin.com/help/linkedin/answer/a522483)                              |
+| X (Twitter) | 280 characters or 25,000 for X Premium users                                | [source](https://help.x.com/en/using-x/types-of-posts)                                       |
+| SMS         | 160 characters (70, if message contains emojis or other unicode characters) |                                                                                              |
+| Slack       | 40,000                                                                      | [source](https://docs.slack.dev/reference/methods/chat.postMessage/#text-blocks-attachments) |
+| Email       | 100,000 characters                                                          |                                                                                              |
+
+Your usage is limited by your subscription plan. Each plan includes a certain number of posts and a certain number of messages per month. Posts and messages are consumed based on the platform you're posting to:
+
+- Posts: LinkedIn, X
+- Messages: SMS, Email, Slack
 
 ## API
 
