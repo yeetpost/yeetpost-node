@@ -1,6 +1,6 @@
 {
   "name": "yeetpost",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Post automation for developers",
   "type": "commonjs",
   "main": "dist/index.cjs",
@@ -9,6 +9,9 @@
   "author": "yeetpost <info@yeetpost.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=20"
   },
