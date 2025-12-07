@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   checks:
-    uses: ./.github/workflows/checks.yaml
+    uses: ./.github/workflows/checks.yml
 
   publish:
     needs: checks

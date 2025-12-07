@@ -57,4 +57,4 @@ git tag vX.X.X
 git push origin vX.X.X
 ```
 
-Monitor the `publish.yaml` workflow to see if the package is published successfully.
+Monitor the `publish.yml` workflow to see if the package is published successfully.
