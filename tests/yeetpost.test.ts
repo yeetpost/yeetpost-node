@@ -58,7 +58,7 @@ describe("yeetpost", () => {
     await yeetpost(validOptions);
 
     expect(mockFetch).toHaveBeenCalledWith(
-      "https://api.yeetpost.com/api/v2/post",
+      "https://api.yeetpost.com/api/v2/post/linkedin",
       expect.any(Object),
     );
   });
@@ -79,8 +79,8 @@ describe("yeetpost", () => {
       expect.any(String),
       expect.objectContaining({
         headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer test-api-key",
+          "Content-Type": "text/plain",
+          "x-api-key": "test-api-key",
         },
       }),
     );
@@ -102,10 +102,7 @@ describe("yeetpost", () => {
       expect.any(String),
       expect.objectContaining({
         method: "POST",
-        body: JSON.stringify({
-          connection: "linkedin",
-          text: "Hello, world!",
-        }),
+        body: "Hello, world!",
       }),
     );
   });
@@ -186,7 +183,7 @@ describe("yeetpost", () => {
     expect(result).toBeUndefined();
   });
 
-  it("uses apiKey option in Authorization header", async () => {
+  it("uses apiKey option in x-api-key header", async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,
       json: () =>
@@ -206,7 +203,7 @@ describe("yeetpost", () => {
       expect.any(String),
       expect.objectContaining({
         headers: expect.objectContaining({
-          Authorization: "Bearer my-api-key",
+          "x-api-key": "my-api-key",
         }),
       }),
     );
@@ -231,7 +228,7 @@ describe("yeetpost", () => {
       expect.any(String),
       expect.objectContaining({
         headers: expect.objectContaining({
-          Authorization: "Bearer env-api-key",
+          "x-api-key": "env-api-key",
         }),
       }),
     );

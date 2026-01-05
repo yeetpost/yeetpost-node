@@ -17,6 +17,10 @@ export type YeetpostResponse =
         | {
             platform: "email";
             sent: true;
+          }
+        | {
+            platform: "slack";
+            sent: true;
           };
     }
   | {
@@ -30,12 +34,20 @@ export type YeetpostResponse =
       status: 401;
       body: {
         error: "unauthorized";
+        message: string;
       };
     }
   | {
       status: 403;
       body: {
         error: "limit_exceeded";
+        message: string;
+      };
+    }
+  | {
+      status: 415;
+      body: {
+        error: "unsupported_content_type";
         message: string;
       };
     }

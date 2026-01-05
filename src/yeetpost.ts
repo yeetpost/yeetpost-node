@@ -8,17 +8,17 @@ const post = async (
 ): Promise<YeetpostResponse> => {
   const { connection, text } = options;
 
-  const result = await fetch("https://api.yeetpost.com/api/v2/post", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
+  const result = await fetch(
+    `https://api.yeetpost.com/api/v2/post/${connection}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain",
+        "x-api-key": apiKey,
+      },
+      body: text,
     },
-    body: JSON.stringify({
-      connection,
-      text,
-    }),
-  });
+  );
 
   if (!result.ok) {
     const status = result.status;

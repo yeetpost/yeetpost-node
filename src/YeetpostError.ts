@@ -2,7 +2,7 @@ import { YeetpostResponse } from "./YeetpostResponse";
 
 export type YeetpostErrorResponse =
   | (YeetpostResponse & {
-      status: 400 | 401 | 422 | 500;
+      status: 400 | 401 | 403 | 415 | 422 | 500;
     })
   | {
       status: number;
