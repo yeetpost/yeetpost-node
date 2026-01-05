@@ -61,7 +61,7 @@ Tag the commit:
 
 ```bash
 git tag vX.X.X
-git push origin vX.X.X
+git push --tags
 ```
 
 Monitor the `publish.yml` workflow to see if the package is published successfully.
