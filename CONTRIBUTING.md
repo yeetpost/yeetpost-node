@@ -50,6 +50,13 @@ Bump version in package.json:
 }
 ```
 
+Make a commit:
+
+```bash
+git commit -m "vX.X.X"
+git push origin main
+```
+
 Tag the commit:
 
 ```bash
