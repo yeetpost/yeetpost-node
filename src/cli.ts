@@ -47,7 +47,7 @@ async function main() {
   //
 
   if (args.includes("--help") || args.includes("-h") || args.length === 0) {
-    console.log(usage);
+    console.error(usage);
     process.exit(0);
   }
 
@@ -60,9 +60,9 @@ async function main() {
       const packageJson = JSON.parse(
         readFileSync(new URL("../package.json", import.meta.url), "utf8"),
       );
-      console.log(packageJson.version);
+      console.error(packageJson.version);
     } catch (error) {
-      console.error(`==> failed to get version: ${error.message}`);
+      console.error(`==> [yeetpost] failed to get version: ${error.message}`);
       process.exit(1);
     }
   }
@@ -75,7 +75,7 @@ async function main() {
   const text = args[1];
 
   if (!connection || !text) {
-    console.error("==> connection and text are required");
+    console.error("==> [yeetpost] connection and text are required");
     process.exit(1);
   }
 
@@ -85,7 +85,7 @@ async function main() {
     readFromEnvFile(".env.local", "YEETPOST_API_KEY");
 
   if (!apiKey) {
-    console.error("==> Missing yeetpost API key");
+    console.error("==> [yeetpost] missing yeetpost API key");
     process.exit(1);
   }
 
@@ -98,17 +98,17 @@ async function main() {
   } catch (error) {
     if (error instanceof YeetpostError) {
       console.error(
-        `==> failed to post: ${error.response.status} ${JSON.stringify(error.response.body)}`,
+        `==> [yeetpost] failed to post: ${error.response.status} ${JSON.stringify(error.response.body)}`,
       );
       process.exit(1);
     }
 
-    console.error(`==> failed to post: ${error.message}`);
+    console.error(`==> [yeetpost] failed to post: ${error.message}`);
     process.exit(1);
   }
 }
 
 main().catch((err) => {
-  console.error(`==> failed with: ${err.message}`);
+  console.error(`==> [yeetpost] failed with: ${err.message}`);
   process.exit(1);
 });
