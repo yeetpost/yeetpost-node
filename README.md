@@ -28,6 +28,7 @@ Features:
 - [Usage](#usage)
 - [Limits](#limits)
 - [API](#api)
+- [CLI](#cli)
 - [License](#license)
 
 ## Install
@@ -160,6 +161,42 @@ try {
     console.error(error.response);
   }
 }
+```
+
+## CLI
+
+This package includes a CLI for yeetpost:
+
+```bash
+npx yeetpost <connection> <text>
+# or
+yarn yeetpost <connection> <text>
+```
+
+Usage:
+
+```shell
+$ yeetpost --help
+Usage:
+  yeetpost <connection> <text>
+
+Options:
+  --help, -h    Show this help message
+  --version, -v Show version
+
+Configuration via environment variable:
+  YEETPOST_API_KEY=your-api-key yeetpost <connection> <text>
+
+Configuration via .env or .env.local file:
+  Place your API key in the .env or .env.local file:
+  YEETPOST_API_KEY=your-api-key
+
+Examples:
+  yeetpost linkedin "Hello, world!"
+  yeetpost x "Hello, world!"
+  yeetpost sms "Hello, world!"
+  yeetpost email "Hello, world!"
+  yeetpost slack "Hello, world!"
 ```
 
 ## License

@@ -40,6 +40,14 @@ To build and run the tests:
 yarn build && yarn test
 ```
 
+### Testing the CLI
+
+To build and run the CLI:
+
+```bash
+yarn build && ./dist/cli.cjs --help
+```
+
 ### Publishing
 
 Bump version in package.json:

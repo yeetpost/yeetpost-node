@@ -12,6 +12,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "yeetpost": "dist/cli.cjs"
+  },
   "engines": {
     "node": ">=20"
   },
@@ -28,7 +31,7 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && chmod +x dist/cli.cjs",
     "test": "jest",
     "formatcheck": "prettier --check ."
   }
