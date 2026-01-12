@@ -1,6 +1,6 @@
 {
   "name": "yeetpost",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Post automation for developers",
   "type": "commonjs",
   "main": "dist/index.cjs",
